@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="TotalView" customModule="GBShop" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="115"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Итого:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LmU-OJ-oUa">
+                    <rect key="frame" x="15" y="20" width="55" height="22"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="сумма" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jik-1w-XEP">
+                    <rect key="frame" x="90" y="21" width="75" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="75" id="Mgg-nc-ggr"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="руб." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Klz-qi-47l">
+                    <rect key="frame" x="173" y="21" width="33" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W5P-in-Sj9">
+                    <rect key="frame" x="153" y="62" width="142" height="35"/>
+                    <color key="backgroundColor" red="0.01663198695" green="0.58996301890000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="35" id="8Qw-uQ-JpT"/>
+                        <constraint firstAttribute="width" constant="142" id="Ih1-4c-KCs"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <state key="normal" title="Оплатить заказ">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Klz-qi-47l" firstAttribute="leading" secondItem="Jik-1w-XEP" secondAttribute="trailing" constant="8" id="8Q2-5y-s0X"/>
+                <constraint firstItem="LmU-OJ-oUa" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="15" id="8wU-qO-Dnk"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="W5P-in-Sj9" secondAttribute="trailing" constant="25" id="bl3-Ex-PMK"/>
+                <constraint firstItem="Jik-1w-XEP" firstAttribute="bottom" secondItem="LmU-OJ-oUa" secondAttribute="bottom" id="jpc-jH-4Mt"/>
+                <constraint firstItem="LmU-OJ-oUa" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="20" id="kaN-JA-LhA"/>
+                <constraint firstItem="Klz-qi-47l" firstAttribute="bottom" secondItem="LmU-OJ-oUa" secondAttribute="bottom" id="obO-Wb-lPD"/>
+                <constraint firstItem="Jik-1w-XEP" firstAttribute="leading" secondItem="LmU-OJ-oUa" secondAttribute="trailing" constant="20" id="tb9-jF-lNr"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="W5P-in-Sj9" secondAttribute="bottom" constant="18" id="vkU-9V-4fC"/>
+                <constraint firstItem="W5P-in-Sj9" firstAttribute="top" secondItem="Jik-1w-XEP" secondAttribute="bottom" constant="20" id="zbV-Fr-mE8"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="orderButton" destination="W5P-in-Sj9" id="IAJ-WT-6pA"/>
+                <outlet property="sum" destination="Jik-1w-XEP" id="s5Y-SF-Mtm"/>
+            </connections>
+            <point key="canvasLocation" x="43" y="-201"/>
+        </view>
+    </objects>
+</document>
